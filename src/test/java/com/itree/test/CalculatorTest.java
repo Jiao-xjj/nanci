@@ -44,7 +44,7 @@ public class CalculatorTest {
 		System.out.println("我是after？？？？？？");
 	}
 
-	@Ignore("test() Not yet implemented")
+	@Ignore("test() 我是自动生成的那一个错误的")
 	@Test
 	public void test() {
 		fail("Not yet implemented");
@@ -79,13 +79,13 @@ public class CalculatorTest {
 		System.out.println("我是test04");
 	}
 
-	@Ignore("testmul() Not yet implemented")
+	@Ignore("testmul() 是一个没完成的")
 	@Test
 	public void testmul() {
 		fail("Not yet implemented");
 	}
 
-	@Ignore("squareRoot() Not yet implemented")
+	//@Ignore("squareRoot() Not yet implemented")
 	// 限时测试
 	@Test(timeout = 10000)
 	public void squareRoot() {
@@ -99,30 +99,6 @@ public class CalculatorTest {
 		calculator.div(1, 0);
 	}
 
-	// @Ignore(" Not yet implemented")
-	// 参数化测试
-	@RunWith(Parameterized.class)
-	public static class SquareTest {
-		private final Calculator calculator = new Calculator();
-		private int param;
-		private int result;
-
-		@Parameters
-		public static Collection data() {
-			return Arrays.asList(new Object[][] { { 2, 4 }, { 0, 0 }, { -3, 9 }, });
-		}
-
-		// 构造函数，对变量进行初始化
-		public SquareTest(int param, int result) {
-			this.param = param;
-			this.result = result;
-		}
-
-		@Test
-		public void square() {
-			calculator.square(param);
-			assertEquals(result, calculator.getResult());
-		}
-	}
+	
 
 }
